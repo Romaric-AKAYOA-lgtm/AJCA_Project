@@ -1,0 +1,118 @@
+{% extends 'template_base.html' %}
+
+{% block contenue %}
+
+<div class="container mt-4">
+
+    <!-- Modal Ajouter Adhérent -->
+    <div class="modal fade show" id="modalAdherent" tabindex="-1" aria-labelledby="modalAdherentLabel" aria-hidden="true" style="display: block;">
+        <div class="modal-dialog modal-lg"> <!-- Largeur augmentée -->
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="modalAdherentLabel">Créer un Adhérent</h5>
+                </div>
+                <div class="modal-body">
+                    {% if form.errors %}
+                    <div class="alert alert-danger">
+                        {% for field in form %}
+                            {% if field.errors %}
+                                <strong>{{ field.label }}</strong> : {{ field.errors|striptags }}
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                    <form action="{% url 'Tuteur:creer' %}" method="POST" enctype="multipart/form-data" class="needs-validation" novalidate>
+                        {% csrf_token %}
+
+                        <div class="row">
+                            <!-- Colonne de gauche -->
+                            <div class="col-md-6 mb-3">
+                                <label for="last_name" class="form-label">Nom</label>
+                                <input type="text" class="form-control input-focus-blue" id="last_name" name="last_name" required>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label for="first_name" class="form-label">Prénom</label>
+                                <input type="text" class="form-control input-focus-blue" id="first_name" name="first_name" required>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label for="date_naissance" class="form-label">Date de naissance</label>
+                                <input type="date" class="form-control input-focus-blue" id="date_naissance" name="date_naissance" required>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label for="lieu_naissance" class="form-label">Lieu de naissance</label>
+                                <input type="text" class="form-control input-focus-blue" id="lieu_naissance" name="lieu_naissance" required>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label for="sexe" class="form-label">Sexe</label>
+                                <select class="form-select input-focus-blue" id="sexe" name="sexe" required>
+                                    <option value="Masculin">Masculin</option>
+                                    <option value="Féminin">Féminin</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label for="num_tel" class="form-label">Numéro de téléphone</label>
+                                <input type="tel" class="form-control input-focus-blue" id="num_tel" name="num_tel" required>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control input-focus-blue" id="email" name="email" required>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label for="lieu_residence" class="form-label">Lieu de résidence</label>
+                                <input type="text" class="form-control input-focus-blue" id="lieu_residence" name="lieu_residence" required>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label for="image" class="form-label">Photo</label>
+                                <input type="file" class="form-control input-focus-blue" id="image" name="image">
+                            </div>
+                            
+                            <!-- Colonne pour l'adresse (à gauche) -->
+                            <div class="col-md-6 mb-3">
+                                <label for="adresse" class="form-label">Adresse</label>
+                                <input type="text" class="form-control input-focus-blue" id="adresse" name="adresse" required>
+                            </div>
+                            
+                        </div>
+
+                        <div class="text-end">
+                            <button type="submit" class="btn btn-primary px-4 py-2 btn-sm  ">Créer</button>
+                            <a href="{% url 'Adherent:Adherent' %}" class="btn btn-secondary px-4 py-2 btn-sm" >Annuler</a>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Script pour fermer le modal proprement -->
+<script>
+     window.onload = function() {
+        var myModal = new bootstrap.Modal(document.getElementById("modalAdherent"), {
+            keyboard: false
+        });
+        myModal.show();
+    }
+    function fermerModal() {
+        var modal = document.getElementById('modalAdherent');
+        modal.style.display = 'none';
+        modal.classList.remove('show');
+        document.body.classList.remove('modal-open');
+        var backdrop = document.querySelector('.modal-backdrop');
+        if (backdrop) {
+            backdrop.remove();
+        }
+    }
+</script>
+
+{% endblock %}
