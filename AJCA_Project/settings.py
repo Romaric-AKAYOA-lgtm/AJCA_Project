@@ -41,8 +41,11 @@ INSTALLED_APPS = [
     'Activation',
     'tuteur',
     'Adherent',
+        'fonction', 
+    'specialite',
     'tuteurAdherent', 
-    'cotisation'
+    'cotisation',
+    'CV'
 ]
 
 MIDDLEWARE = [

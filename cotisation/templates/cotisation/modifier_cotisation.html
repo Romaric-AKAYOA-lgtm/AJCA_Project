@@ -1,0 +1,106 @@
+{% extends 'template_base.html' %}
+
+{% block contenue %}
+
+<div class="container mt-4">
+
+    <!-- Modal Modifier Cotisation -->
+    <div class="modal fade show" id="modalCotisation" tabindex="-1" aria-labelledby="modalCotisationLabel" aria-hidden="true" style="display: block;">
+        <div class="modal-dialog modal-lg"> <!-- Largeur augmentée -->
+            <div class="modal-content">
+                <div class="modal-header bg-warning text-white">
+                    <h5 class="modal-title" id="modalCotisationLabel">Modifier une Cotisation</h5>
+                </div>
+                <div class="modal-body">
+                    {% if form.errors %}
+                    <div class="alert alert-danger">
+                        {% for field in form %}
+                            {% if field.errors %}
+                                <strong>{{ field.label }}</strong> : {{ field.errors|striptags }}
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                    <form  method="POST" class="needs-validation" novalidate>
+                        {% csrf_token %}
+                        {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-danger">{{ message }}</div>
+                        {% endfor %}
+                        {% endif %}
+                    
+                        <div class="row">
+                            <!-- Adhérent -->
+                            <div class="col-12 col-md-6">
+                                <div class="mb-3">
+                                    <label for="id_adherent" class="form-label">Adhérent</label>
+                                    <select class="form-select input-focus-blue" id="id_adherent" name="id_adherent" required>
+                                        {% for adherent in adherent %}
+                                        <option value="{{ adherent.id }}" {% if adherent.id == form.instance.id_adherent.id %}selected{% endif %}>
+                                            {{ adherent.last_name}} {{ adherent.first_name }}
+                                        </option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <!-- Montant -->
+                            <div class="col-12 col-md-6">
+                                <div class="mb-3">
+                                    <label for="montant" class="form-label">Montant</label>
+                                    <input type="number" step="0.01" class="form-control input-focus-blue" id="montant" name="montant" value="{{ form.instance.montant }}" required>
+                                </div>
+                            </div>
+                            
+                            <!-- Année -->
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <label for="annee" class="form-label">Année</label>
+                                    <select class="form-select input-focus-blue" id="annee" name="annee" required>
+                                        <script>
+                                            var currentYear = new Date().getFullYear();
+                                            var selectedYear = "{{ form.instance.annee }}";
+                                            for (var i = 0; i < 5; i++) { // Année en cours + 4 suivantes
+                                                var year = currentYear + i;
+                                                var selected = (year == selectedYear) ? 'selected' : '';
+                                                document.write('<option value="' + year + '" ' + selected + '>' + year + '</option>');
+                                            }
+                                        </script>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-end mt-3">
+                            <a href="{% url 'cotisation:cotisation' %}" class="btn btn-secondary px-4 py-2 btn-sm">Annuler</a>
+                            <button type="submit" class="btn btn-warning px-4 py-2 btn-sm">Modifier</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Script pour fermer le modal proprement -->
+<script>
+    window.onload = function() {
+        var myModal = new bootstrap.Modal(document.getElementById("modalCotisation"), {
+            keyboard: false
+        });
+        myModal.show();
+    }
+    function fermerModal() {
+        var modal = document.getElementById('modalCotisation');
+        modal.style.display = 'none';
+        modal.classList.remove('show');
+        document.body.classList.remove('modal-open');
+        var backdrop = document.querySelector('.modal-backdrop');
+        if (backdrop) {
+            backdrop.remove();
+        }
+    }
+</script>
+
+{% endblock %}

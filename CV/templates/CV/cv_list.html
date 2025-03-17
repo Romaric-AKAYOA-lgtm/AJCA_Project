@@ -1,0 +1,84 @@
+{% extends 'template_base.html' %}
+
+{% block contenue %}
+
+<div class="container mt-4">
+    <h1 class="text-center mb-4">👥 Liste des Adhérents</h1>
+
+    <!-- Barre de recherche -->
+    <form method="GET" class="mb-3">
+        <div class="input-group shadow-sm">
+            <input type="text" name="q" class="form-control" placeholder="🔍 Rechercher un adhérent..." value="{{ query }}">
+            <button type="submit" class="btn btn-primary"><i class="bi bi-search"></i> Rechercher</button>
+        </div>
+    </form>
+
+    <!-- Bouton Ajouter un Adhérent -->
+    <div class="d-flex justify-content-end mb-3">
+        <a href="{% url 'CV:cv_create' %}" class="btn btn-success shadow">
+            <i class="bi bi-person-plus"></i> Ajouter un CV
+        </a>
+    </div>
+
+    <!-- Liste des adhérents sous forme de cartes -->
+    <div class="row">
+        {% for CV in adherents %}
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-lg border-0 rounded-4 adherent-card">
+                <div class="card-body bg-light">
+                    <h5 class="card-title text-dark">
+                        <i class="bi bi-person-circle"></i> {{ CV.first_name }} {{ CV.last_name }}
+                    </h5>
+                    <p class="card-text text-muted">
+                        <strong>📧 Email :</strong> <a href="mailto:{{ CV.email }}" class="text-decoration-none">{{ CV.email }}</a> <br>
+                        <strong>📞 Téléphone :</strong> <a href="tel:{{ CV.telephone }}" class="text-decoration-none">{{ CV.telephone }}</a> <br>
+                        <strong>🎂 Date de naissance :</strong> {{ CV.date_naissance|date:"d/m/Y" }} <br>
+                        <strong>📅 Adhésion :</strong> {{ CV.date_creation|date:"d/m/Y" }}
+                    </p>
+
+                    <div class="d-flex justify-content-between">
+                        <a href="{% url 'Adherent:infomation' CV.id %}" class="btn btn-outline-info btn-sm">
+                            <i class="bi bi-eye"></i> Voir
+                        </a>
+                        <a href="{% url 'Adherent:modifier' CV.id %}" class="btn btn-outline-warning btn-sm">
+                            <i class="bi bi-pencil"></i> Modifier
+                        </a>
+                        <a href="{% url 'Adherent:supprimer' CV.id %}" class="btn btn-outline-danger btn-sm">
+                            <i class="bi bi-trash"></i> Supprimer
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <div class="col-12 text-center">
+            <p class="alert alert-warning text-dark">
+                <i class="bi bi-exclamation-triangle"></i> Aucun adhérent trouvé.
+            </p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- Style CSS pour améliorer les cartes -->
+<style>
+    .adherent-card {
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .adherent-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-body {
+        background-color: #f8f9fa;
+        color: black !important;
+    }
+
+    .text-muted {
+        font-size: 14px;
+    }
+</style>
+
+{% endblock %}

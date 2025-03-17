@@ -2,6 +2,8 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.shortcuts import render, get_object_or_404, redirect
+
+from Adherent.models import Adherent
 from .models import Cotisation
 from .forms import CotisationForm
 
@@ -12,6 +14,7 @@ def cotisation_list(request):
 
 # Créer une nouvelle cotisation
 def cotisation_create(request):
+    adherent=Adherent.objects.all().order_by('last_name')
     if request.method == 'POST':
         form = CotisationForm(request.POST)
         if form.is_valid():
@@ -19,7 +22,7 @@ def cotisation_create(request):
             return redirect('cotisation:cotisation')
     else:
         form = CotisationForm()
-    return render(request, 'cotisation/cotisation_form.html', {'form': form})
+    return render(request, 'cotisation/cotisation_form.html', {'form': form, 'adherent':adherent})
 
 # Détails d'une cotisation
 def cotisation_detail(request, id):
@@ -28,6 +31,7 @@ def cotisation_detail(request, id):
 
 # Modifier une cotisation
 def cotisation_modifier(request, id):
+    adherent=Adherent.objects.all().order_by('last_name')
     cotisation = get_object_or_404(Cotisation, id=id)
     if request.method == 'POST':
         form = CotisationForm(request.POST, instance=cotisation)
@@ -36,7 +40,7 @@ def cotisation_modifier(request, id):
             return redirect('cotisation:cotisation')
     else:
         form = CotisationForm(instance=cotisation)
-    return render(request, 'cotisation/cotisation_form.html', {'form': form})
+    return render(request, 'cotisation/modifier_cotisation.html', {'form': form, 'adherent':adherent})
 
 # Supprimer une cotisation
 def cotisation_supprimer(request, id):

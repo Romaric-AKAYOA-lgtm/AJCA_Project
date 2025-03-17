@@ -1,0 +1,62 @@
+{% extends 'template_base.html' %}
+
+{% block content %}
+    <div class="container mt-4">
+        <h1 class="text-center mb-4">{{ action }} un CV</h1>
+
+        <form method="POST" enctype="multipart/form-data" id="cvForm">
+            {% csrf_token %}
+            
+            <div class="card shadow-lg border-0 rounded-4">
+                <div class="card-body bg-light">
+                    <!-- Formulaire avec Bootstrap -->
+                    <div class="form-group mb-3">
+                        {{ form.as_p }}
+                    </div>
+
+                    <!-- Bouton pour soumettre le formulaire -->
+                    <button type="submit" class="btn btn-primary btn-block">
+                        {{ action }} le CV
+                    </button>
+                </div>
+            </div>
+        </form>
+
+        <!-- Lien vers la liste des CVs -->
+        <div class="d-flex justify-content-center mt-3">
+            <a href="{% url 'CV:cv_list' %}" class="btn btn-outline-secondary">
+                Retour à la liste des CVs
+            </a>
+        </div>
+    </div>
+
+    <!-- Modal de confirmation -->
+    <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmationModalLabel">Succès</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Le CV a été {{ action|lower }} avec succès !
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                    <a href="{% url 'CV:cv_list' %}" class="btn btn-primary">Retour à la liste des CVs</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script JavaScript pour déclencher l'ouverture du modal -->
+    <script>
+        // Lorsque le formulaire est soumis, afficher le modal
+        document.getElementById("cvForm").onsubmit = function() {
+            // Vous pouvez ajouter des validations ou des actions ici avant d'afficher le modal
+            var modal = new bootstrap.Modal(document.getElementById('confirmationModal'));
+            modal.show();
+            return false;  // Empêche la soumission du formulaire pour un test
+        };
+    </script>
+{% endblock %}
