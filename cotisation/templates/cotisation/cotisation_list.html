@@ -1,0 +1,33 @@
+{% extends 'template_base.html' %}
+
+{% block contenue %}
+
+  <h1>Liste des Cotisations</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Adhérent</th>
+        <th>Année</th>
+        <th>Montant</th>
+        <th>Date de Paiement</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for cotisation in cotisations %}
+        <tr>
+          <td>{{ cotisation.adherent.nom }} {{ cotisation.adherent.prenom }}</td>
+          <td>{{ cotisation.annee }}</td>
+          <td>{{ cotisation.montant }}</td>
+          <td>{{ cotisation.date_paiement }}</td>
+          <td>
+            <a href="{% url 'cotisation:cotisation_detail' cotisation.id %}">Voir</a>
+            <a href="{% url 'cotisation:cotisation_modifier' cotisation.id %}">Modifier</a>
+            <a href="{% url 'cotisation:cotisation_supprimer' cotisation.id %}">Supprimer</a>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <a href="{% url 'cotisation:cotisation_create' %}">Ajouter une cotisation</a>
+{% endblock %}

@@ -138,8 +138,10 @@
         <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
     </div>
     <a href="{% url 'home' %}"><i class="fas fa-home"></i><span> Accueil</span></a>
-    <a href="{% url 'Tuteur:Tuteur' %}"><i class="fas fa-user"></i><span> Tuteur</span></a>
+    <a href="{% url 'Tuteur:Tuteur' %}"><i class="fas fa-user"></i><span> Tuteur</span></a>    
     <a href="{% url 'Adherent:Adherent' %}"><i class="fas fa-calendar-alt"></i><span> Adherent</span></a>
+    <a href="{% url 'tuteurAdherent:tuteurAdherent' %}"><i class="fas fa-calendar-alt"></i><span> Tuteur Adherent</span></a>
+    <a href="{% url 'cotisation:cotisation' %}"><i class="fas fa-user"></i><span> Cotisation</span></a>    
 </div>
 
 <!-- Contenu principal -->

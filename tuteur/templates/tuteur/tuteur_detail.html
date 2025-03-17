@@ -47,7 +47,7 @@
                     </tr>
                     <tr>
                         <th>Nom</th>
-                        <td>{{ tuteur.nom }}</td>
+                        <td>{{ tuteur.last_name }} {{ tuteur.first_name }}</td>
                     </tr>
                     <tr>
                         <th>Email</th>
@@ -55,14 +55,14 @@
                     </tr>
                     <tr>
                         <th>Téléphone</th>
-                        <td>{{ tuteur.num_tel }}</td>
+                        <td>{{ tuteur.telephone }}</td>
                     </tr>
                 </table>
             </div>
             <div class="modal-footer">
                 <a href="{% url 'Tuteur:modifier' tuteur.id %}" class="btn btn-warning px-4 py-2 btn-sm">Modifier</a>
                 <a href="{% url 'Tuteur:supprimer' tuteur.id %}" class="btn btn-danger px-4 py-2 btn-sm">Supprimer</a>
-                <a href="{% url 'Tuteur:Adherent' %}" class="btn btn-secondary px-4 py-2 btn-sm">Annuler</a>
+                <a href="{% url 'Tuteur:Tuteur' %}" class="btn btn-secondary px-4 py-2 btn-sm">Annuler</a>
             </div>
         </div>
     </div>

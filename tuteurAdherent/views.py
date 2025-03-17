@@ -9,7 +9,7 @@ from .models import TutteurAdherent
 from .forms import TuteurAdhenrentForm
 
 def tuteurAdherent_list(request):
-    tuteurAdherent = TutteurAdherent.all().order_by("-date_creation")
+    tuteurAdherent = TutteurAdherent.objects.all().order_by('-date_creation')
     return render(request, 'tuteurAdherent/tuteurAdherent_list.html', context={'tuteurAdherent':tuteurAdherent})
 
 def tuteurAdherent_create(request):
@@ -40,7 +40,7 @@ def modifier_tuteurAdherent(request, id):
             return redirect('tuteurAdherent:tuteurAdherent ')
     else:
         form = TuteurAdhenrentForm(instance=tuteurAdherent )
-    return render(request, 'Adherent/modifier_adherent.html',  context={'form': form, 'tuteurs': tuteurs, 'adherent':adherent})
+    return render(request, ' tuteurAdherent/modifier_tuteurAdherent.html',  context={'form': form, 'tuteurs': tuteurs, 'adherent':adherent})
 
 def supprimer_tuteurAdherent(request, id):
     tuteurAdherent   = get_object_or_404(TutteurAdherent, id=id)

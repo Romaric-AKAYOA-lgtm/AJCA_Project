@@ -1,0 +1,10 @@
+{% extends 'template_base.html' %}
+
+{% block contenue %}
+  <h1>{% if form.instance.id %}Modifier{% else %}Créer{% endif %} Cotisation</h1>
+  <form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Enregistrer</button>
+  </form>
+{% endblock %}

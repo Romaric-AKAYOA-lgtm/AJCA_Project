@@ -1,0 +1,10 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+  <h1>Détails de la Cotisation</h1>
+  <p><strong>Adhérent :</strong> {{ cotisation.adherent.nom }} {{ cotisation.adherent.prenom }}</p>
+  <p><strong>Année :</strong> {{ cotisation.annee }}</p>
+  <p><strong>Montant :</strong> {{ cotisation.montant }}</p>
+  <p><strong>Date de Paiement :</strong> {{ cotisation.date_paiement }}</p>
+  <a href="{% url 'cotisation:cotisation_list' %}">Retour à la liste</a>
+{% endblock %}

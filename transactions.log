@@ -1459,3 +1459,575 @@ Traceback (most recent call last):
     raise NoReverseMatch(msg)
 django.urls.exceptions.NoReverseMatch: Reverse for 'modifier' with arguments '('',)' not found. 1 pattern(s) tried: ['Adherent/(?P<id>[0-9]+)/modifier/\\Z']
 2025-03-16 21:29:13,905 - ERROR - basehttp - "GET /Tuteur/1/ HTTP/1.1" 500 167195
+2025-03-16 21:30:56,767 - INFO - basehttp - "GET /Tuteur/1/ HTTP/1.1" 200 9642
+2025-03-16 21:30:57,798 - INFO - basehttp - "GET /media/adherent/Capture_d%C3%A9cran_2025-03-08_160658_maqIkaR.png HTTP/1.1" 200 83657
+2025-03-16 21:31:43,655 - WARNING - log - Not Found: /Adherent/1/modifier/
+2025-03-16 21:31:43,656 - WARNING - basehttp - "GET /Adherent/1/modifier/ HTTP/1.1" 404 3271
+2025-03-16 21:33:31,451 - ERROR - log - Internal Server Error: /Tuteur/1/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\AJCA_Project\tuteur\views.py", line 32, in tuteur_detail
+    return render(request, 'Tuteur/tuteur_detail.html', {'tuteur': tuteur})
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'Adherent' not found. 'Adherent' is not a valid view function or pattern name.
+2025-03-16 21:33:31,456 - ERROR - basehttp - "GET /Tuteur/1/ HTTP/1.1" 500 164042
+2025-03-16 22:24:28,256 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-16 22:24:38,025 - ERROR - log - Internal Server Error: /Tuteur/1/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'tuteur'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\AJCA_Project\tuteur\views.py", line 32, in tuteur_detail
+    return render(request, 'Tuteur/tuteur_detail.html', {'tuteur': tuteur})
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'tuteur' is not a registered namespace
+2025-03-16 22:24:38,079 - ERROR - basehttp - "GET /Tuteur/1/ HTTP/1.1" 500 165347
+2025-03-16 22:24:41,802 - WARNING - log - Not Found: /favicon.ico
+2025-03-16 22:24:41,816 - WARNING - basehttp - "GET /favicon.ico HTTP/1.1" 404 2797
+2025-03-16 22:25:19,833 - ERROR - log - Internal Server Error: /Tuteur/1/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'tuteur'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\AJCA_Project\tuteur\views.py", line 32, in tuteur_detail
+    return render(request, 'Tuteur/tuteur_detail.html', {'tuteur': tuteur})
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'tuteur' is not a registered namespace
+2025-03-16 22:25:20,152 - ERROR - basehttp - "GET /Tuteur/1/ HTTP/1.1" 500 165321
+2025-03-16 22:26:08,019 - ERROR - log - Internal Server Error: /Tuteur/1/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: "url'Tuteur:Tuteur'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\AJCA_Project\tuteur\views.py", line 32, in tuteur_detail
+    return render(request, 'Tuteur/tuteur_detail.html', {'tuteur': tuteur})
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 65: 'url'Tuteur:Tuteur'', expected 'endblock'. Did you forget to register or load this tag?
+2025-03-16 22:26:08,055 - ERROR - basehttp - "GET /Tuteur/1/ HTTP/1.1" 500 178389
+2025-03-16 22:26:41,923 - INFO - basehttp - "GET /Tuteur/1/ HTTP/1.1" 200 9756
+2025-03-16 22:26:54,748 - INFO - basehttp - "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 78743
+2025-03-16 22:26:54,846 - INFO - basehttp - "GET /media/adherent/Capture_d%C3%A9cran_2025-03-08_160658_maqIkaR.png HTTP/1.1" 200 83657
+2025-03-16 22:26:54,896 - INFO - basehttp - "GET /static/image/istockphoto-610004832-1024x1024.jpg HTTP/1.1" 200 267904
+2025-03-16 22:26:54,927 - INFO - basehttp - "GET /static/css/bootstrap.min.css HTTP/1.1" 200 155845
+2025-03-16 22:26:55,067 - INFO - basehttp - "GET /static/image/administration-1867877_1280.jpg HTTP/1.1" 200 407089
+2025-03-16 22:28:48,491 - INFO - basehttp - "GET /Tuteur/1/ HTTP/1.1" 200 9782
+2025-03-16 22:28:58,500 - INFO - basehttp - "GET /Tuteur/1/modifier/ HTTP/1.1" 200 12077
+2025-03-16 22:29:36,446 - INFO - basehttp - "GET /Adherent/ HTTP/1.1" 200 8194
+2025-03-16 22:29:43,207 - INFO - basehttp - "GET /Adherent/ HTTP/1.1" 200 8194
+2025-03-16 22:29:45,173 - INFO - basehttp - "GET /Tuteur/ HTTP/1.1" 200 8966
+2025-03-16 22:29:49,254 - INFO - basehttp - "GET /Tuteur/1/modifier/ HTTP/1.1" 200 12077
+2025-03-16 22:29:56,831 - INFO - basehttp - "GET /Adherent/ HTTP/1.1" 200 8194
+2025-03-16 22:30:00,967 - INFO - basehttp - "GET /Adherent/ HTTP/1.1" 200 8194
+2025-03-16 22:30:06,551 - INFO - basehttp - "GET /Adherent/creer/ HTTP/1.1" 200 12909
+2025-03-16 22:30:11,250 - INFO - basehttp - "GET /Adherent/ HTTP/1.1" 200 8194
+2025-03-16 22:30:14,224 - INFO - basehttp - "GET /Tuteur/ HTTP/1.1" 200 8966
+2025-03-16 22:30:53,715 - INFO - basehttp - "GET /Tuteur/1/modifier/ HTTP/1.1" 200 12077
+2025-03-16 22:30:59,863 - INFO - basehttp - "GET /Adherent/ HTTP/1.1" 200 8194
+2025-03-16 22:31:03,516 - INFO - basehttp - "GET /Adherent/ HTTP/1.1" 200 8194
+2025-03-16 22:31:06,014 - INFO - basehttp - "GET /Tuteur/ HTTP/1.1" 200 8966
+2025-03-16 22:32:02,000 - INFO - basehttp - "GET /Adherent/ HTTP/1.1" 200 8194
+2025-03-16 22:32:04,818 - INFO - basehttp - "GET /Adherent/creer/ HTTP/1.1" 200 12909
+2025-03-16 22:32:44,092 - INFO - basehttp - "POST /Adherent/creer/ HTTP/1.1" 302 0
+2025-03-16 22:32:44,211 - INFO - basehttp - "GET /Adherent/ HTTP/1.1" 200 9185
+2025-03-16 22:32:48,758 - INFO - basehttp - "GET /Adherent/2/modifier/ HTTP/1.1" 200 12219
+2025-03-16 22:33:01,733 - ERROR - log - Internal Server Error: /Adherent/2/modifier/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\AJCA_Project\Adherent\views.py", line 33, in modifier_adherent
+    form.save()
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\AJCA_Project\Adherent\forms.py", line 43, in save
+    raise ValidationError(f"Un tuteur avec le même prénom et nom existe déjà.")
+django.core.exceptions.ValidationError: ['Un tuteur avec le même prénom et nom existe déjà.']
+2025-03-16 22:33:01,760 - ERROR - basehttp - "POST /Adherent/2/modifier/ HTTP/1.1" 500 71576
+2025-03-16 23:03:16,222 - INFO - basehttp - "GET /Adherent/ HTTP/1.1" 200 9185
+2025-03-16 23:03:34,769 - INFO - basehttp - "GET /Tuteur/ HTTP/1.1" 200 8966
+2025-03-16 23:03:37,562 - INFO - basehttp - "GET /Tuteur/ HTTP/1.1" 200 8966
+2025-03-16 23:03:45,095 - INFO - basehttp - "GET /Tuteur/ HTTP/1.1" 200 8966
+2025-03-16 23:11:17,572 - INFO - basehttp - "GET /Tuteur/ HTTP/1.1" 200 8183
+2025-03-16 23:11:21,986 - INFO - basehttp - "GET /Tuteur/ HTTP/1.1" 200 8183
+2025-03-16 23:11:24,050 - INFO - basehttp - "GET /Tuteur/ HTTP/1.1" 200 8183
+2025-03-16 23:11:28,183 - INFO - basehttp - "GET /Tuteur/creer/ HTTP/1.1" 200 12577
+2025-03-16 23:12:10,022 - INFO - basehttp - "POST /Tuteur/creer/ HTTP/1.1" 200 13366
+2025-03-16 23:12:55,150 - INFO - basehttp - "POST /Tuteur/creer/ HTTP/1.1" 302 0
+2025-03-16 23:12:55,199 - INFO - basehttp - "GET /Tuteur/ HTTP/1.1" 200 8183
+2025-03-16 23:13:29,071 - INFO - basehttp - "GET /Tuteur/ HTTP/1.1" 200 10669
+2025-03-16 23:14:28,306 - INFO - basehttp - "GET /Tuteur/ HTTP/1.1" 200 10627
+2025-03-16 23:15:30,063 - INFO - basehttp - "GET /Tuteur/ HTTP/1.1" 200 10643
+2025-03-16 23:15:48,247 - INFO - basehttp - "GET /Tuteur/ HTTP/1.1" 200 10605
+2025-03-16 23:16:54,575 - INFO - basehttp - "GET /Tuteur/ HTTP/1.1" 200 10603
+2025-03-16 23:16:57,180 - INFO - basehttp - "GET /Tuteur/ HTTP/1.1" 200 10603
+2025-03-16 23:17:01,443 - INFO - basehttp - "GET /Adherent/ HTTP/1.1" 200 9185
+2025-03-16 23:21:21,382 - INFO - basehttp - "GET /Adherent/2/modifier/ HTTP/1.1" 200 12219
+2025-03-16 23:21:24,907 - INFO - basehttp - "GET /Adherent/ HTTP/1.1" 200 9185
+2025-03-16 23:21:27,420 - INFO - basehttp - "GET /Tuteur/ HTTP/1.1" 200 10603
+2025-03-16 23:21:31,451 - INFO - basehttp - "GET /Tuteur/3/modifier/ HTTP/1.1" 200 11869
+2025-03-16 23:23:07,057 - INFO - basehttp - "GET /Adherent/ HTTP/1.1" 200 9185
+2025-03-16 23:23:11,051 - INFO - basehttp - "GET /Adherent/2/ HTTP/1.1" 200 10220
+2025-03-16 23:23:11,566 - INFO - basehttp - "GET /media/adherent/Capture_d%C3%A9cran_2025-03-08_160658_YNOVnED.png HTTP/1.1" 200 83657
+2025-03-16 23:23:25,890 - INFO - basehttp - "GET /Adherent/ HTTP/1.1" 200 9185
+2025-03-16 23:26:04,979 - INFO - basehttp - "GET /Adherent/ HTTP/1.1" 200 9185
+2025-03-16 23:26:08,784 - INFO - basehttp - "GET /Tuteur/ HTTP/1.1" 200 10603
+2025-03-16 23:26:13,399 - INFO - basehttp - "GET /Tuteur/3/modifier/ HTTP/1.1" 200 12550
+2025-03-16 23:26:19,948 - INFO - basehttp - "GET /Adherent/ HTTP/1.1" 200 9185
+2025-03-16 23:27:05,066 - INFO - basehttp - "GET /Tuteur/ HTTP/1.1" 200 10603
+2025-03-16 23:27:07,963 - INFO - basehttp - "GET /Tuteur/3/modifier/ HTTP/1.1" 200 12548
+2025-03-16 23:27:11,803 - INFO - basehttp - "GET /Tuteur/ HTTP/1.1" 200 10603
+2025-03-16 23:27:17,446 - INFO - basehttp - "GET /Tuteur/3/modifier/ HTTP/1.1" 200 12548
+2025-03-16 23:30:16,259 - INFO - basehttp - "GET /Tuteur/ HTTP/1.1" 200 10603
+2025-03-16 23:30:18,918 - INFO - basehttp - "GET /Tuteur/3/ HTTP/1.1" 200 9785
+2025-03-16 23:30:19,197 - INFO - basehttp - "GET /media/adherent/Capture_d%C3%A9cran_2025-03-08_160658_sCN5fV6.png HTTP/1.1" 200 83657
+2025-03-17 10:25:34,173 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-17 10:25:49,898 - INFO - basehttp - "GET /Tuteur/3/ HTTP/1.1" 200 9785
+2025-03-17 10:25:54,622 - INFO - basehttp - "GET /static/image/administration-1867877_1280.jpg HTTP/1.1" 200 407089
+2025-03-17 10:25:54,825 - INFO - basehttp - "GET /static/image/istockphoto-610004832-1024x1024.jpg HTTP/1.1" 200 267904
+2025-03-17 10:25:54,827 - INFO - basehttp - "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 78743
+2025-03-17 10:25:54,828 - INFO - basehttp - "GET /static/css/bootstrap.min.css HTTP/1.1" 200 155845
+2025-03-17 10:25:54,927 - INFO - basehttp - "GET /media/adherent/Capture_d%C3%A9cran_2025-03-08_160658_sCN5fV6.png HTTP/1.1" 200 83657
+2025-03-17 10:25:57,684 - WARNING - log - Not Found: /favicon.ico
+2025-03-17 10:25:57,686 - WARNING - basehttp - "GET /favicon.ico HTTP/1.1" 404 2797
+2025-03-17 10:26:57,456 - INFO - basehttp - "GET /Tuteur/3/ HTTP/1.1" 200 9785
+2025-03-17 10:27:03,374 - INFO - basehttp - "GET /Tuteur/3/modifier/ HTTP/1.1" 200 12647
+2025-03-17 10:27:19,736 - INFO - basehttp - "GET /Tuteur/ HTTP/1.1" 200 10603
+2025-03-17 10:27:33,303 - INFO - basehttp - "GET /Tuteur/creer/ HTTP/1.1" 200 12583
+2025-03-17 10:27:42,527 - INFO - basehttp - "GET /Adherent/ HTTP/1.1" 200 9185
+2025-03-17 10:27:47,682 - INFO - basehttp - "GET /Tuteur/ HTTP/1.1" 200 10603
+2025-03-17 10:27:50,032 - INFO - basehttp - "GET /Tuteur/3/modifier/ HTTP/1.1" 200 12647
+2025-03-17 10:27:52,507 - INFO - basehttp - "GET /Tuteur/ HTTP/1.1" 200 10603
+2025-03-17 10:27:57,327 - INFO - basehttp - "GET /Tuteur/creer/ HTTP/1.1" 200 12583
+2025-03-17 10:27:59,107 - INFO - basehttp - "GET /Adherent/ HTTP/1.1" 200 9185
+2025-03-17 10:28:02,553 - INFO - basehttp - "GET /Tuteur/ HTTP/1.1" 200 10603
+2025-03-17 10:28:04,796 - INFO - basehttp - "GET /Tuteur/creer/ HTTP/1.1" 200 12583
+2025-03-17 10:28:08,315 - INFO - basehttp - "GET /Adherent/ HTTP/1.1" 200 9185
+2025-03-17 10:28:10,168 - INFO - basehttp - "GET /Tuteur/ HTTP/1.1" 200 10603
+2025-03-17 10:28:14,673 - INFO - basehttp - "GET /Tuteur/creer/ HTTP/1.1" 200 12583
+2025-03-17 10:34:55,604 - INFO - basehttp - "GET /Adherent/ HTTP/1.1" 200 9185
+2025-03-17 10:34:58,835 - INFO - basehttp - "GET /Tuteur/ HTTP/1.1" 200 10603
+2025-03-17 10:35:00,858 - ERROR - log - Internal Server Error: /Tuteur/creer/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\AJCA_Project\tuteur\views.py", line 27, in tuteur_create
+    return render(request, 'Tuteur/tuteur_create.html', context={'form': form})
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'liste' not found. 'liste' is not a valid view function or pattern name.
+2025-03-17 10:35:00,868 - ERROR - basehttp - "GET /Tuteur/creer/ HTTP/1.1" 500 166346
+2025-03-17 10:35:35,099 - INFO - basehttp - "GET /Tuteur/creer/ HTTP/1.1" 200 12745
+2025-03-17 10:37:02,414 - INFO - basehttp - "GET /Tuteur/ HTTP/1.1" 200 10603
+2025-03-17 10:37:05,352 - INFO - basehttp - "GET / HTTP/1.1" 200 12909
+2025-03-17 10:37:05,490 - INFO - basehttp - "GET /static/image/city-182223_1280.jpg HTTP/1.1" 200 376515
+2025-03-17 10:37:05,524 - INFO - basehttp - "GET /static/image/city-7352352_1280.jpg HTTP/1.1" 200 445704
+2025-03-17 10:37:05,558 - INFO - basehttp - "GET /static/image/istockphoto-2162033406-1024x1024.jpg HTTP/1.1" 200 62104
+2025-03-17 10:37:07,138 - INFO - basehttp - "GET /Tuteur/ HTTP/1.1" 200 10603
+2025-03-17 10:37:08,729 - INFO - basehttp - "GET /Adherent/ HTTP/1.1" 200 9185
+2025-03-17 10:37:10,533 - INFO - basehttp - "GET /Tuteur/ HTTP/1.1" 200 10603
+2025-03-17 10:37:13,643 - INFO - basehttp - "GET /Tuteur/3/ HTTP/1.1" 200 9785
+2025-03-17 10:37:15,704 - INFO - basehttp - "GET /Tuteur/3/modifier/ HTTP/1.1" 200 12647
+2025-03-17 10:37:17,850 - INFO - basehttp - "GET /Tuteur/ HTTP/1.1" 200 10603
+2025-03-17 10:37:23,930 - INFO - basehttp - "GET /Adherent/ HTTP/1.1" 200 9185
+2025-03-17 10:37:28,135 - INFO - basehttp - "GET /Adherent/2/ HTTP/1.1" 200 10220
+2025-03-17 10:37:28,205 - INFO - basehttp - "GET /media/adherent/Capture_d%C3%A9cran_2025-03-08_160658_YNOVnED.png HTTP/1.1" 200 83657
+2025-03-17 10:37:31,308 - INFO - basehttp - "GET /Adherent/2/modifier/ HTTP/1.1" 200 12219
+2025-03-17 10:37:35,885 - INFO - basehttp - "GET /Adherent/ HTTP/1.1" 200 9185
+2025-03-17 10:37:38,461 - INFO - basehttp - "GET / HTTP/1.1" 200 12909
+2025-03-17 10:40:46,530 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\AJCA_Project\tuteurAdherent\urls.py changed, reloading.
+2025-03-17 10:40:50,460 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-17 10:41:44,912 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\AJCA_Project\tuteurAdherent\views.py changed, reloading.
+2025-03-17 10:41:46,454 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-17 10:42:32,888 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\AJCA_Project\tuteurAdherent\views.py changed, reloading.
+2025-03-17 10:42:34,140 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-17 10:47:28,012 - ERROR - log - Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\AJCA_Project\AJCA_Project\views.py", line 25, in home_view
+    return render(request, "home.html", context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'tuteurAdherent' not found. 'tuteurAdherent' is not a valid view function or pattern name.
+2025-03-17 10:47:28,022 - ERROR - basehttp - "GET / HTTP/1.1" 500 141488
+2025-03-17 10:48:27,197 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\AJCA_Project\tuteurAdherent\urls.py changed, reloading.
+2025-03-17 10:48:29,696 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-17 10:48:35,083 - INFO - basehttp - "GET / HTTP/1.1" 200 13013
+2025-03-17 10:48:46,880 - ERROR - log - Internal Server Error: /tuteurAdherent/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\AJCA_Project\tuteurAdherent\views.py", line 12, in tuteurAdherent_list
+    tuteurAdherent = TutteurAdherent.all().order_by("-date_creation")
+AttributeError: type object 'TutteurAdherent' has no attribute 'all'
+2025-03-17 10:48:46,882 - ERROR - basehttp - "GET /tuteurAdherent/ HTTP/1.1" 500 64540
+2025-03-17 10:52:18,902 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\AJCA_Project\tuteurAdherent\views.py changed, reloading.
+2025-03-17 10:52:20,335 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-17 10:52:30,880 - ERROR - log - Internal Server Error: /tuteurAdherent/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\AJCA_Project\tuteurAdherent\views.py", line 13, in tuteurAdherent_list
+    return render(request, 'tuteurAdherent/tuteurAdherent_list.html', context={'tuteurAdherent':tuteurAdherent})
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: tuteurAdherent/tuteurAdherent_list.html
+2025-03-17 10:52:30,886 - ERROR - basehttp - "GET /tuteurAdherent/ HTTP/1.1" 500 81701
+2025-03-17 10:53:19,136 - INFO - basehttp - "GET /tuteurAdherent/ HTTP/1.1" 200 8349
+2025-03-17 10:53:39,675 - INFO - basehttp - "GET /tuteurAdherent/ HTTP/1.1" 200 8349
+2025-03-17 10:53:40,791 - INFO - basehttp - "GET /tuteurAdherent/ HTTP/1.1" 200 8349
+2025-03-17 10:53:43,043 - INFO - basehttp - "GET /tuteurAdherent/ HTTP/1.1" 200 8349
+2025-03-17 10:53:45,384 - INFO - basehttp - "GET /Adherent/creer/ HTTP/1.1" 200 13013
+2025-03-17 10:53:50,774 - INFO - basehttp - "GET /Adherent/ HTTP/1.1" 200 9289
+2025-03-17 10:53:56,855 - INFO - basehttp - "GET /tuteurAdherent/ HTTP/1.1" 200 8349
+2025-03-17 10:54:41,001 - INFO - basehttp - "GET /Adherent/ HTTP/1.1" 200 9289
+2025-03-17 10:54:43,191 - INFO - basehttp - "GET /Tuteur/ HTTP/1.1" 200 10707
+2025-03-17 10:54:46,526 - INFO - basehttp - "GET /Adherent/ HTTP/1.1" 200 9289
+2025-03-17 10:54:49,284 - INFO - basehttp - "GET /Adherent/2/modifier/ HTTP/1.1" 200 12323
+2025-03-17 10:54:52,095 - INFO - basehttp - "GET /Adherent/ HTTP/1.1" 200 9289
+2025-03-17 10:54:55,741 - INFO - basehttp - "GET /Tuteur/ HTTP/1.1" 200 10707
+2025-03-17 10:54:57,422 - INFO - basehttp - "GET /Tuteur/creer/ HTTP/1.1" 200 12849
+2025-03-17 10:55:01,272 - INFO - basehttp - "GET /Tuteur/ HTTP/1.1" 200 10707
+2025-03-17 10:55:06,644 - INFO - basehttp - "GET /Tuteur/3/modifier/ HTTP/1.1" 200 12751
+2025-03-17 10:55:09,709 - INFO - basehttp - "GET /Tuteur/ HTTP/1.1" 200 10707
+2025-03-17 10:55:11,533 - INFO - basehttp - "GET /tuteurAdherent/ HTTP/1.1" 200 8340
+2025-03-17 10:56:00,757 - ERROR - log - Internal Server Error: /tuteurAdherent/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'uteurAdherent'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\AJCA_Project\tuteurAdherent\views.py", line 13, in tuteurAdherent_list
+    return render(request, 'tuteurAdherent/tuteurAdherent_list.html', context={'tuteurAdherent':tuteurAdherent})
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'uteurAdherent' is not a registered namespace
+2025-03-17 10:56:00,768 - ERROR - basehttp - "GET /tuteurAdherent/ HTTP/1.1" 500 160644
+2025-03-17 10:58:08,495 - INFO - basehttp - "GET /tuteurAdherent/ HTTP/1.1" 200 8355
+2025-03-17 10:58:13,857 - INFO - basehttp - "GET /tuteurAdherent/ HTTP/1.1" 200 8355
+2025-03-17 10:58:15,252 - INFO - basehttp - "GET /tuteurAdherent/ HTTP/1.1" 200 8355
+2025-03-17 10:58:16,845 - INFO - basehttp - "GET /tuteurAdherent/ HTTP/1.1" 200 8355
+2025-03-17 10:58:21,065 - INFO - basehttp - "GET /tuteurAdherent/creer/ HTTP/1.1" 200 12544
+2025-03-17 10:58:27,004 - INFO - basehttp - "GET /tuteurAdherent/ HTTP/1.1" 200 8355
+2025-03-17 10:59:28,694 - INFO - basehttp - "GET /tuteurAdherent/ HTTP/1.1" 200 8362
+2025-03-17 10:59:32,864 - INFO - basehttp - "GET /tuteurAdherent/creer/ HTTP/1.1" 200 12544
+2025-03-17 11:03:18,015 - INFO - basehttp - "GET /tuteurAdherent/creer/ HTTP/1.1" 200 12544
+2025-03-17 11:03:27,863 - INFO - basehttp - "GET /tuteurAdherent/ HTTP/1.1" 200 8635
+2025-03-17 11:03:35,392 - INFO - basehttp - "GET /tuteurAdherent/creer/ HTTP/1.1" 200 12544
+2025-03-17 11:08:38,299 - INFO - basehttp - "GET /tuteurAdherent/creer/ HTTP/1.1" 200 9891
+2025-03-17 11:09:41,206 - INFO - basehttp - "GET /tuteurAdherent/creer/ HTTP/1.1" 200 9928
+2025-03-17 11:10:07,321 - INFO - basehttp - "GET /tuteurAdherent/creer/ HTTP/1.1" 200 10026
+2025-03-17 11:10:40,569 - INFO - basehttp - "GET /tuteurAdherent/creer/ HTTP/1.1" 200 10042
+2025-03-17 11:10:46,549 - INFO - basehttp - "POST /tuteurAdherent/creer/ HTTP/1.1" 302 0
+2025-03-17 11:10:46,578 - INFO - basehttp - "GET /tuteurAdherent/ HTTP/1.1" 200 8635
+2025-03-17 11:10:56,741 - INFO - basehttp - "GET /tuteurAdherent/creer/ HTTP/1.1" 200 10042
+2025-03-17 11:11:02,196 - INFO - basehttp - "POST /tuteurAdherent/creer/ HTTP/1.1" 302 0
+2025-03-17 11:11:02,209 - INFO - basehttp - "GET /tuteurAdherent/ HTTP/1.1" 200 8635
+2025-03-17 11:11:37,406 - INFO - basehttp - "GET /tuteurAdherent/ HTTP/1.1" 200 10020
+2025-03-17 11:12:42,856 - INFO - basehttp - "GET /tuteurAdherent/ HTTP/1.1" 200 10052
+2025-03-17 11:13:28,691 - INFO - basehttp - "GET /tuteurAdherent/ HTTP/1.1" 200 10089
+2025-03-17 11:16:38,515 - INFO - basehttp - "GET /Tuteur/ HTTP/1.1" 200 10707
+2025-03-17 11:16:46,612 - INFO - basehttp - "GET /Tuteur/3/modifier/ HTTP/1.1" 200 12751
+2025-03-17 11:17:01,706 - INFO - basehttp - "POST /Tuteur/3/modifier/ HTTP/1.1" 302 0
+2025-03-17 11:17:01,736 - INFO - basehttp - "GET /Tuteur/ HTTP/1.1" 200 10719
+2025-03-17 11:17:07,066 - INFO - basehttp - "GET /Tuteur/1/modifier/ HTTP/1.1" 200 12752
+2025-03-17 11:17:12,738 - INFO - basehttp - "POST /Tuteur/1/modifier/ HTTP/1.1" 302 0
+2025-03-17 11:17:12,759 - INFO - basehttp - "GET /Tuteur/ HTTP/1.1" 200 10731
+2025-03-17 11:17:16,717 - INFO - basehttp - "GET /tuteurAdherent/ HTTP/1.1" 200 10101

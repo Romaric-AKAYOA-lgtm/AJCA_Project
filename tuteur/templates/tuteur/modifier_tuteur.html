@@ -3,14 +3,14 @@
 {% block contenue %}
 
 <div class="container mt-4">
-    <h1 class="text-center">Gestion des Adhérents</h1>
+    <h1 class="text-center">Gestion des Tuteurs</h1>
 
-    <!-- Modal Modifier Adhérent -->
-    <div class="modal fade show d-block" id="editAdherentModal" tabindex="-1" aria-labelledby="editAdherentModalLabel" aria-hidden="true">
+    <!-- Modal Modifier Tuteur -->
+    <div class="modal fade show d-block" id="editTuteurModal" tabindex="-1" aria-labelledby="editTuteurModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header bg-warning text-white">
-                    <h5 class="modal-title" id="editAdherentModalLabel">Modifier un Adhérent</h5>
+                    <h5 class="modal-title" id="editTuteurModalLabel">Modifier un Tuteur</h5>
                 </div>
                 <div class="modal-body">
                     {% if form.errors %}
@@ -28,68 +28,72 @@
                         {% for message in messages %}
                             <div class="alert alert-danger">{{ message }}</div>
                         {% endfor %}
-                    {% endif %}
+                        {% endif %}
                 
-                        <div class="mb-3">
-                            <label for="nom" class="form-label">Nom</label>
-                            <input type="text" class="form-control input-focus-blue" id="nom" name="nom" value="{{ adherent.nom }}" required>
-                        </div>
-                        
-                        <div class="mb-3">
-                            <label for="prenom" class="form-label">Prénom</label>
-                            <input type="text" class="form-control input-focus-blue" id="prenom" name="prenom" value="{{ adherent.prenom }}" required>
-                        </div>
+                        <div class="row">
+                            <!-- Colonne de gauche -->
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="last_name" class="form-label">Nom</label>
+                                    <input type="text" class="form-control input-focus-blue" id="last_name" name="last_name" value="{{ tuteur.last_name|default:'Nom par défaut' }}" required>
+                                </div>
 
-                        <div class="mb-3">
-                            <label for="date_naissance" class="form-label">Date de naissance</label>
-                            <input type="date" class="form-control input-focus-blue" id="date_naissance" name="date_naissance" value="{{ adherent.date_naissance|date:'Y-m-d' }}" required>
-                        </div>
+                                <div class="mb-3">
+                                    <label for="first_name" class="form-label">Prénom</label>
+                                    <input type="text" class="form-control input-focus-blue" id="first_name" name="first_name" value="{{ tuteur.first_name|default:'Prénom par défaut' }}" required>
+                                </div>
 
-                        <div class="mb-3">
-                            <label for="lieu_naissance" class="form-label">Lieu de naissance</label>
-                            <input type="text" class="form-control input-focus-blue" id="lieu_naissance" name="lieu_naissance" value="{{ adherent.lieu_naissance }}" required>
-                        </div>
+                                <div class="mb-3">
+                                    <label for="date_naissance" class="form-label">Date de naissance</label>
+                                    <input type="date" class="form-control input-focus-blue" id="date_naissance" name="date_naissance" value="{{ tuteur.date_naissance|date:'Y-m-d'|default:'2000-01-01' }}" required>
+                                </div>
 
-                        <div class="mb-3">
-                            <label for="sexe" class="form-label">Sexe</label>
-                            <select class="form-select input-focus-blue" id="sexe" name="sexe" required>
-                                <option value="Masculin" {% if adherent.sexe == 'Masculin' %}selected{% endif %}>Masculin</option>
-                                <option value="Féminin" {% if adherent.sexe == 'Féminin' %}selected{% endif %}>Féminin</option>
-                            </select>
-                        </div>
+                                <div class="mb-3">
+                                    <label for="lieu_naissance" class="form-label">Lieu de naissance</label>
+                                    <input type="text" class="form-control input-focus-blue" id="lieu_naissance" name="lieu_naissance" value="{{ tuteur.lieu_naissance|default:'Lieu par défaut' }}" required>
+                                </div>
 
-                        <div class="mb-3">
-                            <label for="num_tel" class="form-label">Numéro de téléphone</label>
-                            <input type="tel" class="form-control input-focus-blue" id="num_tel" name="num_tel" value="{{ adherent.num_tel }}" required>
-                        </div>
+                                <div class="mb-3">
+                                    <label for="sexe" class="form-label">Sexe</label>
+                                    <select class="form-select input-focus-blue" id="sexe" name="sexe" required>
+                                        <option value="Masculin" {% if tuteur.sexe == 'Masculin' %}selected{% endif %}>Masculin</option>
+                                        <option value="Féminin" {% if tuteur.sexe == 'Féminin' %}selected{% endif %}>Féminin</option>
+                                    </select>
+                                </div>
+                            </div>
 
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control input-focus-blue" id="email" name="email" value="{{ adherent.email }}" required>
-                        </div>
+                            <!-- Colonne de droite -->
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="telephone" class="form-label">Numéro de téléphone</label>
+                                    <input type="tel" class="form-control input-focus-blue" id="telephone" name="telephone" value="{{ tuteur.telephone|default:'0123456789' }}" required>
+                                </div>
 
-                        <div class="mb-3">
-                            <label for="adresse" class="form-label">Adresse</label>
-                            <textarea class="form-control input-focus-blue" id="adresse" name="adresse" rows="3" required>{{ adherent.adresse }}</textarea>
-                        </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control input-focus-blue" id="email" name="email" value="{{ tuteur.email|default:'exemple@mail.com' }}" required>
+                                </div>
 
-                        <div class="mb-3">
-                            <label for="type_adhesion" class="form-label">Type d'adhésion</label>
-                            <select class="form-select input-focus-blue" id="type_adhesion" name="type_adhesion" required>
-                                <option value="email" {% if adherent.type_adhesion == 'email' %}selected{% endif %}>Email</option>
-                                <option value="telephone" {% if adherent.type_adhesion == 'telephone' %}selected{% endif %}>Téléphone</option>
-                                <option value="courrier" {% if adherent.type_adhesion == 'courrier' %}selected{% endif %}>Courrier</option>
-                            </select>
-                        </div>
+                                <div class="mb-3">
+                                    <label for="adresse" class="form-label">Adresse</label>
+                                    <input type="text" class="form-control input-focus-blue" id="adresse" name="adresse" value="{{ tuteur.adresse|default:'Adresse par défaut' }}" required>
+                                </div>
 
-                        <div class="mb-3">
-                            <label for="image" class="form-label">Photo</label>
-                            <input type="file" class="form-control input-focus-blue" id="image" name="image">
+                                <div class="mb-3">
+                                    <label for="lieu_residence" class="form-label">Lieu de Résidence</label>
+                                    <input type="text" class="form-control input-focus-blue" id="lieu_residence" name="lieu_residence" value="{{ tuteur.lieu_residence|default:'Lieu de résidence par défaut' }}" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="image" class="form-label">Photo</label>
+                                    <input type="file" class="form-control input-focus-blue" id="image" name="image">
+                                </div>
+                            </div>
                         </div>
 
                         <div class="text-end">
                             <button type="submit" class="btn btn-warning">Modifier</button>
-                            <a href="{% url 'Adherent:Adherent' %}" class="btn btn-secondary">Annuler</a>
+                            <a href="{% url 'Tuteur:Tuteur' %}" class="btn btn-secondary">Annuler</a>
                         </div>
                     </form>
                 </div>
@@ -101,7 +105,7 @@
 <!-- Script pour afficher automatiquement le modal -->
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        var myModal = new bootstrap.Modal(document.getElementById("editAdherentModal"), {
+        var myModal = new bootstrap.Modal(document.getElementById("editTuteurModal"), {
             keyboard: false
         });
         myModal.show();

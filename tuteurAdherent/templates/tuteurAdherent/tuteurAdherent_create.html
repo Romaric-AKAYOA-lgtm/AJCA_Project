@@ -6,7 +6,7 @@
 
     <!-- Modal Ajouter Adhérent -->
     <div class="modal fade show" id="modalAdherent" tabindex="-1" aria-labelledby="modalAdherentLabel" aria-hidden="true" style="display: block;">
-        <div class="modal-dialog modal-lg"> <!-- Largeur augmentée -->
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header bg-primary text-white">
                     <h5 class="modal-title" id="modalAdherentLabel">Créer un Adhérent</h5>
@@ -24,68 +24,26 @@
                     <form action="{% url 'tuteurAdherent:creer' %}" method="POST" enctype="multipart/form-data" class="needs-validation" novalidate>
                         {% csrf_token %}
                         
+                        <!-- Sélecteur d'adhérent -->
                         <div class="mb-3">
-                            <label for="nom" class="form-label">Nom</label>
-                            <input type="text" class="form-control input-focus-blue" id="nom" name="nom" required>
-                        </div>
-                        
-                        <div class="mb-3">
-                            <label for="prenom" class="form-label">Prénom</label>
-                            <input type="text" class="form-control input-focus-blue" id="prenom" name="prenom" required>
-                        </div>
-    
-                        <div class="mb-3">
-                            <label for="date_naissance" class="form-label">Date de naissance</label>
-                            <input type="date" class="form-control input-focus-blue" id="date_naissance" name="date_naissance" required>
-                        </div>
-    
-                        <div class="mb-3">
-                            <label for="lieu_naissance" class="form-label">Lieu de naissance</label>
-                            <input type="text" class="form-control input-focus-blue" id="lieu_naissance" name="lieu_naissance" required>
-                        </div>
-                        
-                        <div class="mb-3">
-                            <label for="lieu_residence" class="form-label">Lieu de résidence</label>
-                            <input type="text" class="form-control input-focus-blue" id="lieu_residence" name="lieu_residence" required>
-                        </div>
-    
-                        <div class="mb-3">
-                            <label for="sexe" class="form-label">Sexe</label>
-                            <select class="form-select input-focus-blue" id="sexe" name="sexe" required>
-                                <option value="Masculin">Masculin</option>
-                                <option value="Féminin">Féminin</option>
-                            </select>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="telephone" class="form-label">Numéro de téléphone</label>
-                            <input type="tel" class="form-control input-focus-blue" id="telephone" name="telephone" required>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control input-focus-blue" id="email" name="email" required>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="adresse" class="form-label">Adresse</label>
-                            <textarea class="form-control input-focus-blue" id="adresse" name="adresse" rows="3" required></textarea>
-                        </div>
-
-                        <!-- Sélecteur de tuteur -->
-                        <div class="mb-3">
-                            <label for="tuteur" class="form-label">Tuteur (si mineur)</label>
-                            <select class="form-select input-focus-blue" id="tuteur" name="tuteur">
-                                <option value="">Aucun</option>
-                                {% for tuteur in tuteurs %}
-                                    <option value="{{ tuteur.id }}">{{ tuteur.nom }} {{ tuteur.prenom }}</option>
+                            <label for="adherent" class="form-label">Adhérent</label>
+                            <select class="form-select input-focus-blue" id="adherent" name="adherent" required>
+                                <option value="">Sélectionner un adhérent</option>
+                                {% for adherent in adherent %}
+                                    <option value="{{ adherent.id }}">{{ adherent.last_name }} {{ adherent.first_name }}</option>
                                 {% endfor %}
                             </select>
                         </div>
 
+                        <!-- Sélecteur de tuteur -->
                         <div class="mb-3">
-                            <label for="image" class="form-label">Photo</label>
-                            <input type="file" class="form-control input-focus-blue" id="image" name="image">
+                            <label for="tuteur" class="form-label">Tuteur</label>
+                            <select class="form-select input-focus-blue" id="tuteur" name="tuteur" required>
+                                <option value="">Sélectionner un tuteur</option>
+                                {% for tuteur in tuteurs %}
+                                    <option value="{{ tuteur.id }}">{{ tuteur.last_name }} {{ tuteur.first_name }}</option>
+                                {% endfor %}
+                            </select>
                         </div>
 
                         <div class="text-end">
@@ -103,7 +61,7 @@
 
 <!-- Script pour afficher le modal à l'ouverture -->
 <script>
-     window.onload = function() {
+    window.onload = function() {
         var myModal = new bootstrap.Modal(document.getElementById("modalAdherent"), {
             keyboard: false
         });
