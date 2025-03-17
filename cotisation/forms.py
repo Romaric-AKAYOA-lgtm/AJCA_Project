@@ -5,7 +5,7 @@ from .models import Cotisation
 class CotisationForm(forms.ModelForm):
     class Meta:
         model = Cotisation
-        fields = ['adherent', 'annee', 'montant', 'date_paiement']
+        fields = ['adherent', 'annee', 'montant']
         widgets = {
             'annee': forms.NumberInput(attrs={'min': 2000, 'max': 2100}),
             'date_paiement': forms.DateInput(attrs={'type': 'date'}),

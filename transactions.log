@@ -2387,3 +2387,25 @@ django.urls.exceptions.NoReverseMatch: 'cotisation' is not a registered namespac
 2025-03-17 11:53:01,464 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\AJCA_Project\AJCA_Project\urls.py changed, reloading.
 2025-03-17 11:53:02,983 - INFO - autoreload - Watching for file changes with StatReloader
 2025-03-17 11:53:22,561 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-17 11:56:27,014 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-17 11:57:37,494 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-17 12:00:11,606 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-17 12:00:18,124 - INFO - basehttp - "GET /tuteurAdherent/ HTTP/1.1" 200 12075
+2025-03-17 12:00:27,545 - ERROR - log - Internal Server Error: /cotisation/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\AJCA_Project\cotisation\views.py", line 10, in cotisation_list
+    cotisations = Cotisation.objects.all().order_by('- date_paiement')
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 1659, in order_by
+    obj.query.add_ordering(*field_names)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 2222, in add_ordering
+    self.names_to_path(item.split(LOOKUP_SEP), self.model._meta)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1725, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword ' date_paiement' into field. Choices are: adherent, adherent_id, annee, date_paiement, id, montant
+2025-03-17 12:00:27,556 - ERROR - basehttp - "GET /cotisation/ HTTP/1.1" 500 79255
+2025-03-17 12:04:38,224 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\AJCA_Project\cotisation\views.py changed, reloading.
+2025-03-17 12:04:40,339 - INFO - autoreload - Watching for file changes with StatReloader

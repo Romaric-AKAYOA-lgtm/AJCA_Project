@@ -7,7 +7,7 @@ from .forms import CotisationForm
 
 # Liste des cotisations
 def cotisation_list(request):
-    cotisations = Cotisation.objects.all().order_by('- date_paiement')
+    cotisations = Cotisation.objects.all().order_by('-date_paiement')
     return render(request, 'cotisation/cotisation_list.html', {'cotisations': cotisations})
 
 # Créer une nouvelle cotisation
