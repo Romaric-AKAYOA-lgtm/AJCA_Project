@@ -3127,3 +3127,16 @@ Traceback (most recent call last):
     raise NoReverseMatch(msg)
 django.urls.exceptions.NoReverseMatch: Reverse for 'cv_modifier' with arguments '('',)' not found. 1 pattern(s) tried: ['CV(?P<id>[0-9]+)/modifier/\\Z']
 2025-03-17 17:59:17,289 - ERROR - basehttp - "GET /CV?q=KAYOA HTTP/1.1" 500 170336
+2025-03-17 18:02:18,580 - INFO - basehttp - "GET /CV?q=KAYOA HTTP/1.1" 200 9010
+2025-03-17 18:02:30,143 - INFO - basehttp - "GET /Adherent/creer/ HTTP/1.1" 200 13329
+2025-03-17 18:09:22,592 - INFO - basehttp - "GET /Adherent/ HTTP/1.1" 200 9605
+2025-03-17 18:09:25,590 - INFO - basehttp - "GET /CV HTTP/1.1" 200 8993
+2025-03-17 18:09:33,457 - INFO - basehttp - "GET /CVajouter/ HTTP/1.1" 200 7542
+2025-03-17 18:12:04,374 - INFO - basehttp - "GET /CVajouter/ HTTP/1.1" 200 7542
+2025-03-17 18:12:06,036 - INFO - basehttp - "GET /CVajouter/ HTTP/1.1" 200 7542
+2025-03-17 18:12:07,197 - INFO - basehttp - "GET /CVajouter/ HTTP/1.1" 200 7542
+2025-03-17 18:14:06,012 - INFO - basehttp - "GET /CVajouter/ HTTP/1.1" 200 7542
+2025-03-17 18:14:08,210 - INFO - basehttp - "GET /CVajouter/ HTTP/1.1" 200 7542
+2025-03-17 18:14:09,252 - INFO - basehttp - "GET /CVajouter/ HTTP/1.1" 200 7542
+2025-03-17 18:14:11,412 - INFO - basehttp - "GET /CV HTTP/1.1" 200 8993
+2025-03-17 18:14:16,153 - INFO - basehttp - "GET /CVajouter/ HTTP/1.1" 200 7542
