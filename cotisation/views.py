@@ -42,4 +42,4 @@ def cotisation_modifier(request, id):
 def cotisation_supprimer(request, id):
     cotisation = get_object_or_404(Cotisation, id=id)
     cotisation.delete()
-    return redirect('cotisation:cotisation_list')
+    return redirect('cotisation:cotisation')
