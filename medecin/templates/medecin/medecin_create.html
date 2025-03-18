@@ -1,0 +1,18 @@
+{% extends 'template_base.html' %}
+
+{% block contenue %}
+
+<div class="container mt-4">
+    <h1 class="text-center mb-4 text-white">Ajouter un Médecin</h1>
+
+    <div class="card p-4 bg-light">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-success"><i class="bi bi-check"></i> Enregistrer</button>
+            <a href="{% url 'medecin:medecin' %}" class="btn btn-secondary"><i class="bi bi-arrow-left"></i> Retour</a>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

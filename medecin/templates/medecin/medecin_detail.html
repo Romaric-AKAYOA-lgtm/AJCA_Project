@@ -1,0 +1,27 @@
+{% extends 'template_base.html' %}
+
+{% block contenue %}
+
+<div class="container mt-4">
+    <h1 class="text-center mb-4 text-white">Détails du Médecin</h1>
+
+    <div class="card p-4 bg-light">
+        <p><strong>Nom :</strong> {{ medecin.nom }}</p>
+        <p><strong>Spécialité :</strong> {{ medecin.specialite }}</p>
+        <p><strong>Date de Création :</strong> {{ medecin.date_creation }}</p>
+
+        <div class="d-flex justify-content-between">
+            <a href="{% url 'medecin:modifier' medecin.id %}" class="btn btn-warning">
+                <i class="bi bi-pencil"></i> Modifier
+            </a>
+            <a href="{% url 'medecin:supprimer' medecin.id %}" class="btn btn-danger">
+                <i class="bi bi-trash"></i> Supprimer
+            </a>
+            <a href="{% url 'medecin:medecin' %}" class="btn btn-secondary">
+                <i class="bi bi-arrow-left"></i> Retour à la liste
+            </a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
