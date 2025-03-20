@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'specialite',
     'tuteurAdherent', 
     'cotisation',
-    'CV'
+    'CV', 
+    'medecin'
 ]
 
 MIDDLEWARE = [

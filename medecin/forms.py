@@ -1,15 +1,15 @@
 from datetime import datetime
 from django import forms
-from .models import Adherent
 from django.core.exceptions import ValidationError
+from .models import Medecin
 
 
 class MedecinForm(forms.ModelForm):
     class Meta:
-        model = Adherent
+        model = Medecin
         fields = [
             'last_name', 'first_name', 'date_naissance', 'lieu_naissance', 'lieu_residence',
-            'adresse', 'sexe', 'telephone', 'email', 'image'
+            'adresse', 'sexe', 'telephone', 'email', 'image', 'specialite'
         ]
         widgets = {
             'date_naissance': forms.DateInput(attrs={'type': 'date'}),
@@ -39,7 +39,7 @@ class MedecinForm(forms.ModelForm):
         last_name = self.cleaned_data.get('last_name')
 
         # Vérification des doublons
-        if Adherent.objects.filter(first_name=first_name, last_name=last_name).exists():
+        if Medecin.objects.filter(first_name=first_name, last_name=last_name).exists():
             raise ValidationError(f"Un tuteur avec le même prénom et nom existe déjà.")
         
         # Sauvegarde de l'objet Tuteur

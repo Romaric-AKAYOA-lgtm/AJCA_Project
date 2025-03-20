@@ -3140,3 +3140,758 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'cv_modifier' with arguments 
 2025-03-17 18:14:09,252 - INFO - basehttp - "GET /CVajouter/ HTTP/1.1" 200 7542
 2025-03-17 18:14:11,412 - INFO - basehttp - "GET /CV HTTP/1.1" 200 8993
 2025-03-17 18:14:16,153 - INFO - basehttp - "GET /CVajouter/ HTTP/1.1" 200 7542
+2025-03-19 18:42:54,129 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-19 18:43:17,630 - ERROR - log - Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\AJCA_Project\AJCA_Project\views.py", line 25, in home_view
+    return render(request, "home.html", context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 1389, in url
+    args.append(parser.compile_filter(value))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 703, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ''' from '''
+2025-03-19 18:43:17,645 - ERROR - basehttp - "GET / HTTP/1.1" 500 184138
+2025-03-19 18:43:18,698 - WARNING - log - Not Found: /favicon.ico
+2025-03-19 18:43:18,700 - WARNING - basehttp - "GET /favicon.ico HTTP/1.1" 404 3230
+2025-03-19 18:43:48,053 - ERROR - log - Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\AJCA_Project\AJCA_Project\views.py", line 25, in home_view
+    return render(request, "home.html", context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 1389, in url
+    args.append(parser.compile_filter(value))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 703, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ''' from '''
+2025-03-19 18:43:48,056 - ERROR - basehttp - "GET / HTTP/1.1" 500 184126
+2025-03-19 18:43:53,637 - ERROR - log - Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\AJCA_Project\AJCA_Project\views.py", line 25, in home_view
+    return render(request, "home.html", context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 1389, in url
+    args.append(parser.compile_filter(value))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 703, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ''' from '''
+2025-03-19 18:43:53,640 - ERROR - basehttp - "GET / HTTP/1.1" 500 184126
+2025-03-19 18:43:55,836 - ERROR - log - Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\AJCA_Project\AJCA_Project\views.py", line 25, in home_view
+    return render(request, "home.html", context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 1389, in url
+    args.append(parser.compile_filter(value))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 703, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ''' from '''
+2025-03-19 18:43:55,840 - ERROR - basehttp - "GET / HTTP/1.1" 500 184126
+2025-03-19 18:43:57,901 - ERROR - log - Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\AJCA_Project\AJCA_Project\views.py", line 25, in home_view
+    return render(request, "home.html", context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 1389, in url
+    args.append(parser.compile_filter(value))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 703, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ''' from '''
+2025-03-19 18:43:57,904 - ERROR - basehttp - "GET / HTTP/1.1" 500 184126
+2025-03-19 18:44:00,236 - ERROR - log - Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\AJCA_Project\AJCA_Project\views.py", line 25, in home_view
+    return render(request, "home.html", context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 1389, in url
+    args.append(parser.compile_filter(value))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 703, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ''' from '''
+2025-03-19 18:44:00,239 - ERROR - basehttp - "GET / HTTP/1.1" 500 184126
+2025-03-19 18:45:10,447 - ERROR - log - Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'medecin'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\AJCA_Project\AJCA_Project\views.py", line 25, in home_view
+    return render(request, "home.html", context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'medecin' is not a registered namespace
+2025-03-19 18:45:10,450 - ERROR - basehttp - "GET / HTTP/1.1" 500 144576
+2025-03-19 18:46:34,652 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\AJCA_Project\AJCA_Project\urls.py changed, reloading.
+2025-03-19 18:46:36,436 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-19 18:46:55,798 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\AJCA_Project\AJCA_Project\settings.py changed, reloading.
+2025-03-19 18:46:58,176 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-19 18:49:58,938 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-19 18:50:02,892 - INFO - basehttp - "GET / HTTP/1.1" 200 13406
+2025-03-19 18:50:05,611 - INFO - basehttp - "GET /static/css/bootstrap.min.css HTTP/1.1" 200 155845
+2025-03-19 18:50:05,625 - INFO - basehttp - "GET /static/image/istockphoto-610004832-1024x1024.jpg HTTP/1.1" 200 267904
+2025-03-19 18:50:05,643 - INFO - basehttp - "GET /static/image/administration-1867877_1280.jpg HTTP/1.1" 200 407089
+2025-03-19 18:50:05,660 - INFO - basehttp - "GET / HTTP/1.1" 200 13406
+2025-03-19 18:50:05,671 - INFO - basehttp - "GET /static/image/istockphoto-2162033406-1024x1024.jpg HTTP/1.1" 200 62104
+2025-03-19 18:50:05,694 - INFO - basehttp - "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 78743
+2025-03-19 18:50:05,703 - INFO - basehttp - "GET /static/image/city-182223_1280.jpg HTTP/1.1" 200 376515
+2025-03-19 18:50:05,724 - INFO - basehttp - "GET /static/image/city-7352352_1280.jpg HTTP/1.1" 200 445704
+2025-03-19 18:50:22,848 - INFO - basehttp - "GET /medecin/ HTTP/1.1" 200 8551
+2025-03-19 18:50:35,673 - INFO - basehttp - "GET /medecin/creer/ HTTP/1.1" 200 9874
+2025-03-19 18:54:13,377 - INFO - basehttp - "GET /medecin/creer/ HTTP/1.1" 200 12546
+2025-03-19 18:55:56,486 - INFO - basehttp - "GET /medecin/creer/ HTTP/1.1" 200 13016
+2025-03-19 18:58:14,611 - INFO - basehttp - "GET /medecin/creer/ HTTP/1.1" 200 12648
+2025-03-19 18:58:20,673 - INFO - basehttp - "GET /medecin/ HTTP/1.1" 200 8551
+2025-03-19 18:58:23,053 - INFO - basehttp - "GET /specialite/ HTTP/1.1" 200 8671
+2025-03-19 18:58:28,312 - INFO - basehttp - "GET /specialite/creer/ HTTP/1.1" 200 9412
+2025-03-19 18:59:00,237 - INFO - basehttp - "POST /specialite/creer/ HTTP/1.1" 302 0
+2025-03-19 18:59:00,289 - INFO - basehttp - "GET /specialite/ HTTP/1.1" 200 9231
+2025-03-19 18:59:04,672 - INFO - basehttp - "GET /fonction/ HTTP/1.1" 200 8662
+2025-03-19 18:59:15,025 - INFO - basehttp - "GET /medecin/ HTTP/1.1" 200 8551
+2025-03-19 18:59:16,483 - INFO - basehttp - "GET /medecin/creer/ HTTP/1.1" 200 12648
+2025-03-19 18:59:44,879 - INFO - basehttp - "GET /medecin/creer/ HTTP/1.1" 200 12648
+2025-03-19 19:02:51,335 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\AJCA_Project\medecin\views.py changed, reloading.
+2025-03-19 19:02:54,556 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-19 19:02:58,294 - INFO - basehttp - "GET /medecin/creer/ HTTP/1.1" 200 12761
+2025-03-19 19:03:32,036 - INFO - basehttp - "GET /medecin/creer/ HTTP/1.1" 200 12774
+2025-03-19 19:04:04,333 - INFO - basehttp - "POST /medecin/creer/ HTTP/1.1" 200 13672
+2025-03-19 19:07:17,637 - INFO - basehttp - "POST /medecin/creer/ HTTP/1.1" 200 13505
+2025-03-19 19:09:55,296 - INFO - basehttp - "POST /medecin/creer/ HTTP/1.1" 200 13506
+2025-03-19 19:14:17,140 - INFO - basehttp - "POST /medecin/creer/ HTTP/1.1" 200 13505
+2025-03-19 19:19:29,147 - INFO - basehttp - "POST /medecin/creer/ HTTP/1.1" 200 13182
+2025-03-19 19:19:57,440 - INFO - basehttp - "POST /medecin/creer/ HTTP/1.1" 200 13505
+2025-03-19 21:38:42,499 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-19 21:38:57,031 - INFO - basehttp - "GET / HTTP/1.1" 200 13406
+2025-03-19 21:38:59,802 - INFO - basehttp - "GET /static/css/bootstrap.min.css HTTP/1.1" 200 155845
+2025-03-19 21:38:59,812 - INFO - basehttp - "GET /static/image/istockphoto-610004832-1024x1024.jpg HTTP/1.1" 200 267904
+2025-03-19 21:38:59,830 - INFO - basehttp - "GET /static/image/administration-1867877_1280.jpg HTTP/1.1" 200 407089
+2025-03-19 21:38:59,862 - INFO - basehttp - "GET /static/image/istockphoto-2162033406-1024x1024.jpg HTTP/1.1" 200 62104
+2025-03-19 21:39:00,221 - INFO - basehttp - "GET /static/image/city-7352352_1280.jpg HTTP/1.1" 200 445704
+2025-03-19 21:39:00,249 - INFO - basehttp - "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 78743
+2025-03-19 21:39:00,254 - INFO - basehttp - "GET /static/image/city-182223_1280.jpg HTTP/1.1" 200 376515
+2025-03-19 21:39:00,404 - WARNING - log - Not Found: /favicon.ico
+2025-03-19 21:39:00,405 - WARNING - basehttp - "GET /favicon.ico HTTP/1.1" 404 3338
+2025-03-19 21:39:09,297 - INFO - basehttp - "GET /medecin/ HTTP/1.1" 200 8551
+2025-03-19 21:39:11,831 - INFO - basehttp - "GET /medecin/creer/ HTTP/1.1" 200 12881
+2025-03-19 21:41:29,689 - INFO - basehttp - "GET /medecin/creer/ HTTP/1.1" 200 13263
+2025-03-19 21:46:01,394 - INFO - basehttp - "GET /medecin/creer/ HTTP/1.1" 200 13202
+2025-03-19 21:47:41,801 - INFO - basehttp - "GET /medecin/creer/ HTTP/1.1" 200 13460
+2025-03-19 21:49:45,440 - INFO - basehttp - "POST /medecin/creer/ HTTP/1.1" 302 0
+2025-03-19 21:49:45,529 - INFO - basehttp - "GET /medecin/ HTTP/1.1" 200 9143
+2025-03-19 21:55:45,398 - INFO - basehttp - "GET /medecin/ HTTP/1.1" 200 9312
+2025-03-19 21:56:12,414 - INFO - basehttp - "GET /medecin/ HTTP/1.1" 200 9312
+2025-03-19 21:56:14,587 - INFO - basehttp - "GET /medecin/ HTTP/1.1" 200 9312
+2025-03-19 21:56:16,064 - INFO - basehttp - "GET /medecin/ HTTP/1.1" 200 9312
+2025-03-19 21:57:00,984 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\AJCA_Project\medecin\forms.py changed, reloading.
+2025-03-19 21:57:04,923 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-19 21:57:56,816 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-19 21:59:37,070 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\AJCA_Project\medecin\models.py changed, reloading.
+2025-03-19 21:59:38,498 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-19 22:01:10,446 - INFO - autoreload - C:\Users\DAII IATITUDE\Desktop\Projet\AJCA_Project\medecin\models.py changed, reloading.
+2025-03-19 22:01:12,124 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-19 22:11:21,070 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-19 22:11:27,854 - INFO - basehttp - "GET /medecin/ HTTP/1.1" 200 8637
+2025-03-19 22:11:30,815 - INFO - basehttp - "GET /medecin/creer/ HTTP/1.1" 200 13334
+2025-03-19 22:11:44,720 - INFO - basehttp - "GET /medecin/ HTTP/1.1" 200 8637
+2025-03-19 22:12:27,228 - INFO - basehttp - "GET /medecin/creer/ HTTP/1.1" 200 13334
+2025-03-19 22:12:29,545 - INFO - basehttp - "GET /medecin/ HTTP/1.1" 200 8637
+2025-03-19 22:12:31,607 - INFO - basehttp - "GET /specialite/ HTTP/1.1" 302 0
+2025-03-19 22:12:31,627 - INFO - basehttp - "GET /activation/page/ HTTP/1.1" 200 9762
+2025-03-19 22:13:42,925 - INFO - autoreload - Watching for file changes with StatReloader
+2025-03-19 22:13:50,707 - INFO - basehttp - "GET /admin HTTP/1.1" 301 0
+2025-03-19 22:13:50,845 - INFO - basehttp - "GET /admin/ HTTP/1.1" 302 0
+2025-03-19 22:13:50,953 - INFO - basehttp - "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4181
+2025-03-19 22:13:54,074 - INFO - basehttp - "GET /static/admin/css/login.css HTTP/1.1" 200 958
+2025-03-19 22:13:54,088 - INFO - basehttp - "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+2025-03-19 22:13:54,096 - INFO - basehttp - "GET /static/admin/css/responsive.css HTTP/1.1" 200 18559
+2025-03-19 22:13:54,099 - INFO - basehttp - "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+2025-03-19 22:13:54,107 - INFO - basehttp - "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+2025-03-19 22:13:54,111 - INFO - basehttp - "GET /static/admin/css/base.css HTTP/1.1" 200 21310
+2025-03-19 22:13:54,115 - INFO - basehttp - "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+2025-03-19 22:14:04,579 - INFO - basehttp - "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4343
+2025-03-19 22:14:18,748 - INFO - basehttp - "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4343
+2025-03-19 22:14:45,397 - INFO - basehttp - "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+2025-03-19 22:14:45,452 - INFO - basehttp - "GET /admin/ HTTP/1.1" 200 11047
+2025-03-19 22:14:45,503 - INFO - basehttp - "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+2025-03-19 22:14:45,537 - INFO - basehttp - "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+2025-03-19 22:14:45,543 - INFO - basehttp - "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+2025-03-19 22:15:15,789 - INFO - basehttp - "GET /admin/Activation/activation/ HTTP/1.1" 200 11371
+2025-03-19 22:15:15,866 - INFO - basehttp - "GET /static/admin/css/changelists.css HTTP/1.1" 200 6566
+2025-03-19 22:15:15,888 - INFO - basehttp - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-03-19 22:15:15,889 - INFO - basehttp - "GET /static/admin/js/actions.js HTTP/1.1" 200 7872
+2025-03-19 22:15:15,906 - INFO - basehttp - "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+2025-03-19 22:15:15,907 - INFO - basehttp - "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+2025-03-19 22:15:15,937 - INFO - basehttp - "GET /static/admin/js/core.js HTTP/1.1" 200 5682
+2025-03-19 22:15:15,941 - INFO - basehttp - "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 8943
+2025-03-19 22:15:15,950 - INFO - basehttp - "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+2025-03-19 22:15:15,957 - INFO - basehttp - "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 292458
+2025-03-19 22:15:15,981 - INFO - basehttp - "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+2025-03-19 22:15:16,000 - INFO - basehttp - "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+2025-03-19 22:15:16,088 - INFO - basehttp - "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+2025-03-19 22:15:18,350 - INFO - basehttp - "GET /admin/Activation/activation/add/ HTTP/1.1" 200 12939
+2025-03-19 22:15:18,416 - INFO - basehttp - "GET /static/admin/css/forms.css HTTP/1.1" 200 9090
+2025-03-19 22:15:18,418 - INFO - basehttp - "GET /static/admin/js/calendar.js HTTP/1.1" 200 8466
+2025-03-19 22:15:18,458 - INFO - basehttp - "GET /static/admin/css/widgets.css HTTP/1.1" 200 11921
+2025-03-19 22:15:18,459 - INFO - basehttp - "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+2025-03-19 22:15:18,464 - INFO - basehttp - "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+2025-03-19 22:15:18,477 - INFO - basehttp - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-03-19 22:15:18,484 - INFO - basehttp - "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+2025-03-19 22:15:18,677 - INFO - basehttp - "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+2025-03-19 22:15:18,683 - INFO - basehttp - "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+2025-03-19 22:15:20,792 - INFO - basehttp - "GET /static/admin/img/calendar-icons.svg HTTP/1.1" 200 1094
+2025-03-19 22:15:26,112 - INFO - basehttp - "POST /admin/Activation/activation/add/ HTTP/1.1" 302 0
+2025-03-19 22:15:26,170 - INFO - basehttp - "GET /admin/Activation/activation/ HTTP/1.1" 200 13306
+2025-03-19 22:15:26,246 - INFO - basehttp - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-03-19 22:15:26,303 - INFO - basehttp - "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+2025-03-19 22:15:41,432 - INFO - basehttp - "GET /activation/page/ HTTP/1.1" 200 9762
+2025-03-19 22:15:49,191 - INFO - basehttp - "POST /activation/page/ HTTP/1.1" 302 0
+2025-03-19 22:15:49,208 - INFO - basehttp - "GET / HTTP/1.1" 200 13406
+2025-03-19 22:16:28,601 - INFO - basehttp - "GET /admin/auth/user/ HTTP/1.1" 200 14840
+2025-03-19 22:16:28,678 - INFO - basehttp - "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+2025-03-19 22:16:28,679 - INFO - basehttp - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-03-19 22:16:28,748 - INFO - basehttp - "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+2025-03-19 22:17:35,380 - INFO - basehttp - "GET /admin/auth/user/1/change/ HTTP/1.1" 200 27076
+2025-03-19 22:17:35,450 - INFO - basehttp - "GET /static/admin/js/SelectBox.js HTTP/1.1" 200 4530
+2025-03-19 22:17:35,460 - INFO - basehttp - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-03-19 22:17:35,472 - INFO - basehttp - "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 15292
+2025-03-19 22:17:35,669 - INFO - basehttp - "GET /static/admin/img/icon-unknown-alt.svg HTTP/1.1" 200 655
+2025-03-19 22:17:35,670 - INFO - basehttp - "GET /static/admin/img/selector-icons.svg HTTP/1.1" 200 3291
+2025-03-19 22:17:35,687 - INFO - basehttp - "GET /static/admin/img/icon-unknown.svg HTTP/1.1" 200 655
+2025-03-19 22:18:27,107 - INFO - basehttp - "POST /admin/auth/user/1/change/ HTTP/1.1" 302 0
+2025-03-19 22:18:27,171 - INFO - basehttp - "GET /admin/auth/user/ HTTP/1.1" 200 15034
+2025-03-19 22:18:27,275 - INFO - basehttp - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2025-03-19 22:18:43,263 - INFO - basehttp - "GET /specialite/ HTTP/1.1" 200 8671
+2025-03-19 22:18:49,304 - INFO - basehttp - "GET /specialite/creer/ HTTP/1.1" 200 9412
+2025-03-19 22:19:04,135 - INFO - basehttp - "POST /specialite/creer/ HTTP/1.1" 302 0
+2025-03-19 22:19:04,155 - INFO - basehttp - "GET /specialite/ HTTP/1.1" 200 9231
+2025-03-19 22:19:45,050 - INFO - basehttp - "GET /medecin/ HTTP/1.1" 200 8637
+2025-03-19 22:19:50,768 - INFO - basehttp - "GET /medecin/creer/ HTTP/1.1" 200 13460
+2025-03-19 22:20:23,713 - INFO - basehttp - "POST /medecin/creer/ HTTP/1.1" 302 0
+2025-03-19 22:20:23,748 - INFO - basehttp - "GET /medecin/ HTTP/1.1" 200 9325
+2025-03-19 22:21:30,850 - INFO - basehttp - "GET /medecin/ HTTP/1.1" 200 9350
+2025-03-19 22:22:06,025 - INFO - basehttp - "GET /medecin/ HTTP/1.1" 200 9335
+2025-03-19 22:22:12,335 - INFO - basehttp - "GET /medecin/1/modifier/ HTTP/1.1" 200 10464
+2025-03-19 22:27:24,291 - INFO - basehttp - "GET /medecin/1/modifier/ HTTP/1.1" 200 13538
+2025-03-19 22:31:37,097 - ERROR - log - Internal Server Error: /medecin/1/modifier/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\AJCA_Project\medecin\views.py", line 39, in modifier_medecin
+    return render(request, 'medecin/modifier_medecin.html', {'form': form, 'medecin': medecin, 'specialite':specialite})
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 484, in parse
+    raise self.error(token, e)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 482, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 698, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 606, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'add_class'
+2025-03-19 22:31:37,107 - ERROR - basehttp - "GET /medecin/1/modifier/ HTTP/1.1" 500 202989
+2025-03-19 22:36:43,566 - ERROR - log - Internal Server Error: /medecin/1/modifier/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\AJCA_Project\medecin\views.py", line 39, in modifier_medecin
+    return render(request, 'medecin/modifier_medecin.html', {'form': form, 'medecin': medecin, 'specialite':specialite})
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 484, in parse
+    raise self.error(token, e)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 482, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 698, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 606, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'add_class'
+2025-03-19 22:36:43,576 - ERROR - basehttp - "GET /medecin/1/modifier/ HTTP/1.1" 500 202989
+2025-03-19 22:39:21,052 - ERROR - log - Internal Server Error: /medecin/1/modifier/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 1026, in find_library
+    return parser.libraries[name]
+KeyError: 'widget_tweaks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\AJCA_Project\medecin\views.py", line 39, in modifier_medecin
+    return render(request, 'medecin/modifier_medecin.html', {'form': form, 'medecin': medecin, 'specialite':specialite})
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 1088, in load
+    lib = find_library(parser, name)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 1028, in find_library
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'widget_tweaks' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_urls
+cache
+i18n
+l10n
+log
+static
+tz
+2025-03-19 22:39:21,059 - ERROR - basehttp - "GET /medecin/1/modifier/ HTTP/1.1" 500 191024
+2025-03-19 22:42:36,560 - ERROR - log - Internal Server Error: /medecin/1/modifier/
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'Medecin'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DAII IATITUDE\Desktop\Projet\AJCA_Project\medecin\views.py", line 39, in modifier_medecin
+    return render(request, 'medecin/modifier_medecin.html', {'form': form, 'medecin': medecin, 'specialite':specialite})
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\DAII IATITUDE\AppData\Local\Programs\Python\Python39\lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'Medecin' is not a registered namespace
+2025-03-19 22:42:36,566 - ERROR - basehttp - "GET /medecin/1/modifier/ HTTP/1.1" 500 171543
+2025-03-19 22:43:13,255 - INFO - basehttp - "GET /medecin/1/modifier/ HTTP/1.1" 200 12664
+2025-03-19 22:43:42,321 - INFO - basehttp - "GET /medecin/ HTTP/1.1" 200 9335
+2025-03-19 22:43:43,870 - INFO - basehttp - "GET /medecin/creer/ HTTP/1.1" 200 13460
+2025-03-19 22:44:39,976 - INFO - basehttp - "GET /medecin/creer/ HTTP/1.1" 200 13737
+2025-03-19 22:45:10,734 - INFO - basehttp - "GET /medecin/creer/ HTTP/1.1" 200 13777
+2025-03-19 22:48:07,814 - INFO - basehttp - "GET /medecin/creer/ HTTP/1.1" 200 13733
+2025-03-19 22:50:52,522 - INFO - basehttp - "GET /medecin/creer/ HTTP/1.1" 200 2806
+2025-03-19 22:57:42,924 - INFO - basehttp - "GET /medecin/creer/ HTTP/1.1" 200 13733
+2025-03-19 22:59:29,007 - INFO - basehttp - "GET /medecin/creer/ HTTP/1.1" 200 13736
+2025-03-19 22:59:51,066 - INFO - basehttp - "GET /medecin/creer/ HTTP/1.1" 200 13745
+2025-03-19 23:00:21,275 - INFO - basehttp - "GET /medecin/creer/ HTTP/1.1" 200 13713
+2025-03-19 23:00:42,623 - INFO - basehttp - "GET /medecin/creer/ HTTP/1.1" 200 13717
+2025-03-19 23:00:45,747 - INFO - basehttp - "GET /medecin/creer/ HTTP/1.1" 200 13717
+2025-03-19 23:01:03,579 - INFO - basehttp - "GET /medecin/creer/ HTTP/1.1" 200 13717
+2025-03-19 23:05:00,569 - INFO - basehttp - "GET /medecin/ HTTP/1.1" 200 9335
+2025-03-19 23:05:03,188 - INFO - basehttp - "GET /medecin/1/modifier/ HTTP/1.1" 200 13019
+2025-03-19 23:06:34,132 - INFO - basehttp - "GET /medecin/1/modifier/ HTTP/1.1" 200 13015
+2025-03-19 23:06:54,834 - INFO - basehttp - "GET /medecin/1/modifier/ HTTP/1.1" 200 13015
+2025-03-19 23:07:11,196 - INFO - basehttp - "GET /medecin/1/modifier/ HTTP/1.1" 200 13015
+2025-03-19 23:07:28,468 - INFO - basehttp - "GET /medecin/ HTTP/1.1" 200 9335
+2025-03-19 23:07:44,830 - INFO - basehttp - "GET /CV HTTP/1.1" 200 9070
+2025-03-19 23:07:47,958 - INFO - basehttp - "GET /CV?q= HTTP/1.1" 200 9070
+2025-03-19 23:07:49,651 - INFO - basehttp - "GET /CVajouter/ HTTP/1.1" 200 7619
+2025-03-19 23:07:53,555 - INFO - basehttp - "GET /CV HTTP/1.1" 200 9070

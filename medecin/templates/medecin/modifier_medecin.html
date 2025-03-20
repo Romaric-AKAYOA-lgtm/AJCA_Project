@@ -3,16 +3,104 @@
 {% block contenue %}
 
 <div class="container mt-4">
-    <h1 class="text-center mb-4 text-white">Modifier un Médecin</h1>
+    <h1 class="text-center">Gestion des Médecins</h1>
 
-    <div class="card p-4 bg-light">
-        <form method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit" class="btn btn-success"><i class="bi bi-check"></i> Enregistrer</button>
-            <a href="{% url 'medecin:medecin' %}" class="btn btn-secondary"><i class="bi bi-arrow-left"></i> Annuler</a>
-        </form>
+    <!-- Modal Modifier Médecin -->
+    <div class="modal fade show d-block" id="editMedecinModal" tabindex="-1" aria-labelledby="editMedecinModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-warning text-white">
+                    <h5 class="modal-title" id="editMedecinModalLabel">Modifier un Médecin</h5>
+                </div>
+                <div class="modal-body">
+                    {% if form.errors %}
+                    <div class="alert alert-danger">
+                        {% for field in form %}
+                            {% if field.errors %}
+                                <strong>{{ field.label }}</strong> : {{ field.errors|striptags }}
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                    <form method="POST" enctype="multipart/form-data" class="needs-validation" novalidate>
+                        {% csrf_token %}
+
+                        <!-- Grille Bootstrap avec colonnes équilibrées -->
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="last_name" class="form-label">Nom</label>
+                                <input type="text" class="form-control" id="last_name" name="last_name" value="{{ medecin.last_name }}" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="first_name" class="form-label">Prénom</label>
+                                <input type="text" class="form-control" id="first_name" name="first_name" value="{{ medecin.first_name }}" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="date_naissance" class="form-label">Date de naissance</label>
+                                <input type="date" class="form-control" id="date_naissance" name="date_naissance" value="{{ medecin.date_naissance|date:'Y-m-d' }}" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="lieu_naissance" class="form-label">Lieu de naissance</label>
+                                <input type="text" class="form-control" id="lieu_naissance" name="lieu_naissance" value="{{ medecin.lieu_naissance }}" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="lieu_residence" class="form-label">Lieu de résidence</label>
+                                <input type="text" class="form-control" id="lieu_residence" name="lieu_residence" value="{{ medecin.lieu_residence }}">
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <label for="sexe" class="form-label">Sexe</label>
+                                <select class="form-select" id="sexe" name="sexe" required>
+                                    <option value="Masculin" {% if medecin.sexe == "Masculin" %}selected{% endif %}>Masculin</option>
+                                    <option value="Féminin" {% if medecin.sexe == "Féminin" %}selected{% endif %}>Féminin</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="telephone" class="form-label">Numéro de téléphone</label>
+                                <input type="tel" class="form-control" id="telephone" name="telephone" value="{{ medecin.telephone }}" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" value="{{ medecin.email }}" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="adresse" class="form-label">Adresse</label>
+                                <input type="text" class="form-control" id="adresse" name="adresse" value="{{ medecin.adresse }}" required>
+                            </div>
+
+                            <!-- Nouveau champ Spécialité -->
+                            <div class="col-md-6">
+                                <label for="specialite" class="form-label">Spécialité</label>
+                                <input type="text" class="form-control" id="specialite" name="specialite" value="{{ medecin.specialite }}" required>
+                            </div>
+                            
+                            <div class="mb-1">
+                                <label for="image" class="form-label">Photo</label>
+                                <input type="file" class="form-control" id="image" name="image">
+                            </div>
+                        </div>
+
+                        <div class="text-end mt-4">
+                            <button type="submit" class="btn btn-warning">Modifier</button>
+                            <a href="{% url 'medecin:medecin' %}" class="btn btn-secondary">Annuler</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+
+<!-- Script pour afficher automatiquement le modal -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var myModal = new bootstrap.Modal(document.getElementById("editMedecinModal"), {
+            keyboard: false
+        });
+        myModal.show();
+    });
+</script>
 
 {% endblock %}

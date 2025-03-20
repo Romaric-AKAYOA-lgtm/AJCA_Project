@@ -17,7 +17,9 @@
                 <tr>
                     <th>#</th>
                     <th>Nom</th>
+                    <th>Prénom</th>
                     <th>Spécialité</th>
+                    <th>Date de recrutement</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -25,8 +27,10 @@
                 {% for medecin in medecins %}
                 <tr>
                     <td>{{ medecin.id }}</td>
-                    <td>{{ medecin.nom }}</td>
-                    <td>{{ medecin.specialite }}</td>
+                    <td>{{ medecin.last_name }}</td>
+                    <td>{{ medecin.first_name }}</td>
+                    <td>{{ medecin.specialite.designation }}</td>
+                    <td>{{ medecin.date_creation|date:'Y-m-d' }}</td>
                     <td>
                         <a href="{% url 'medecin:information' medecin.id %}" class="btn btn-info btn-sm mb-1">
                             <i class="bi bi-eye"></i> Détails
@@ -41,7 +45,7 @@
                 </tr>
                 {% empty %}
                 <tr>
-                    <td colspan="4" class="text-center text-muted">Aucun médecin trouvé.</td>
+                    <td colspan="6" class="text-center text-muted">Aucun médecin trouvé.</td>
                 </tr>
                 {% endfor %}
             </tbody>

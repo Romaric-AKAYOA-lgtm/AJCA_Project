@@ -16,5 +16,6 @@ urlpatterns = [
     path('CV', include('CV.urls')),
     path('tuteurAdherent/',include('tuteurAdherent.urls') ),
     path('activation/', include('Activation.urls')),
+    path('medecin/', include('medecin.urls'))
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
